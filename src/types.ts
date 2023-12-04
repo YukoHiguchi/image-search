@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react";
-
 export interface UnsplashImage {
   id: string;
   urls: {
@@ -18,8 +16,11 @@ export type PagenationProps = {
 };
 
 export type SearchProps = {
-  setSearchTerm: Dispatch<SetStateAction<string>>;
-  searchImages: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+};
+
+export type ResultProps = {
+  searchTerm: string;
 };
 
 export type Direction = "prev" | "next";

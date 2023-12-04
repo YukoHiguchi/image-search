@@ -1,5 +1,5 @@
 import { PagenationProps } from "../types";
-import { PAR_PAGE } from "../utils";
+import { PAR_PAGE } from "../utils/utils";
 
 const Pagenation = ({ page, totalPages, loadPage }: PagenationProps) => {
   return (
