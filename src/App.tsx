@@ -1,11 +1,10 @@
-import { useState } from "react";
-import Title from "./components/Title";
-import Form from "./components/Form";
-import Result from "./components/Result";
-import "./App.css";
+import { useState } from 'react';
+import Title from './components/Title';
+import Form from './components/Form';
+import Result from './components/Result';
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,7 +15,7 @@ function App() {
   };
 
   return (
-    <div className="flex items-center flex-col my-8">
+    <div className='flex items-center flex-col my-8 gap-4 bg-white container px-6'>
       <Title />
       <Form handleSubmit={handleSubmit} />
       {searchTerm?.length > 0 && <Result searchTerm={searchTerm} />}

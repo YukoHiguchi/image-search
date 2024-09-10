@@ -1,7 +1,17 @@
+import { Photos } from 'unsplash-js/dist/methods/search/types/response';
+
+export type UnsplashResponseData = {
+  type: 'success';
+  response: Photos;
+  originalResponse: Response;
+  errors?: undefined;
+  status: number;
+};
 export interface UnsplashImage {
   id: string;
   urls: {
     regular: string;
+    small: string;
   };
   links: {
     html: string;
@@ -23,4 +33,4 @@ export type ResultProps = {
   searchTerm: string;
 };
 
-export type Direction = "prev" | "next";
+export type Direction = 'prev' | 'next';

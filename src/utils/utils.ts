@@ -1,19 +1,18 @@
-import axios, { AxiosError } from "axios";
+import { createApi } from 'unsplash-js';
+
+const api = createApi({
+  accessKey: import.meta.env.VITE_UNSPLASH_API_KEY,
+});
 
 export const PAR_PAGE = 15;
-export const fetchImages = async (page: number, searchTerm: string) => {
-  console.log("fetchImages is called", page, searchTerm);
-
+export const fetchImagesUnsplash = async (page: number, searchTerm: string) => {
   if (!searchTerm) {
     return [];
   }
-  const url = `https://api.unsplash.com/search/photos?query=${searchTerm}&per_page=${PAR_PAGE}&page=${page}&client_id=${
-    import.meta.env.VITE_UNSPLASH_API_KEY
-  }`;
-  try {
-    const { data } = await axios.get(url);
-    return data;
-  } catch (error) {
-    throw new Error((error as AxiosError).message);
-  }
+  const data = await api.search.getPhotos({
+    query: searchTerm,
+    page: page,
+    perPage: PAR_PAGE,
+  });
+  return data || [];
 };
