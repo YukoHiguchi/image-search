@@ -1,7 +1,7 @@
 const Title = () => {
   return (
     <header>
-      <h1 className="text-xl font-bold">Image Search App</h1>
+      <h1 className='text-2xl font-bold'>Image Search</h1>
     </header>
   );
 };

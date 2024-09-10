@@ -4,7 +4,7 @@
 
 @layer components {
   .image-container {
-    @apply grid grid-cols-3 gap-[25px] my-[2rem] mx-auto w-screen max-w-[1250px] 2xl:max-w-[1000px] xl:grid-cols-2 xl:max-w-[800px] lg:max-w-[580px] md:grid-cols-1 md:max-w-[400px] sm:max-w-[300px];
+    @apply grid grid-cols-3 gap-3 my-2 xl:my-4 mx-auto w-screen max-w-[1250px] 2xl:max-w-[1000px] xl:grid-cols-2 xl:max-w-[800px] lg:max-w-[580px] md:grid-cols-1 md:max-w-[400px] sm:max-w-[300px];
   }
 }
 :root {
@@ -13,8 +13,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
